@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "/home/mj/StudioProjects/HearingAid/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/home/mj/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/mj/StudioProjects/HearingAid/app/.externalNativeBuild/cmake/debug/x86_64 --target clean"
+  ],
+  "libraries": {
+    "echo-Debug-x86_64": {
+      "artifactName": "echo",
+      "buildCommand": "/home/mj/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/mj/StudioProjects/HearingAid/app/.externalNativeBuild/cmake/debug/x86_64 --target echo",
+      "abi": "x86_64",
+      "output": "/home/mj/StudioProjects/HearingAid/app/build/intermediates/cmake/debug/obj/x86_64/libecho.so"
+    }
+  }
+}

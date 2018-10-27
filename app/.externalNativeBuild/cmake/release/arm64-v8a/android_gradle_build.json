@@ -1,0 +1,68 @@
+
+{
+	"buildFiles" : [ "/home/mj/StudioProjects/HearingAid/app/src/main/cpp/CMakeLists.txt" ],
+	"cleanCommands" : 
+	[
+		"/home/mj/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/mj/StudioProjects/HearingAid/app/.externalNativeBuild/cmake/release/arm64-v8a --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"echo-Release-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "echo",
+			"buildCommand" : "/home/mj/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/mj/StudioProjects/HearingAid/app/.externalNativeBuild/cmake/release/arm64-v8a --target echo",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android23 --gcc-toolchain=/home/mj/Android/Sdk/ndk-bundle/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/mj/Android/Sdk/ndk-bundle/sysroot  -Decho_EXPORTS -isystem /home/mj/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem /home/mj/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include  -isystem /home/mj/Android/Sdk/ndk-bundle/sysroot/usr/include/aarch64-linux-android -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O2 -DNDEBUG  -fPIC   -Wall -Werror  -c ",
+					"src" : "/home/mj/StudioProjects/HearingAid/app/src/main/cpp/audio_main.cpp",
+					"workingDirectory" : "/home/mj/StudioProjects/HearingAid/app/.externalNativeBuild/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android23 --gcc-toolchain=/home/mj/Android/Sdk/ndk-bundle/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/mj/Android/Sdk/ndk-bundle/sysroot  -Decho_EXPORTS -isystem /home/mj/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem /home/mj/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include  -isystem /home/mj/Android/Sdk/ndk-bundle/sysroot/usr/include/aarch64-linux-android -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O2 -DNDEBUG  -fPIC   -Wall -Werror  -c ",
+					"src" : "/home/mj/StudioProjects/HearingAid/app/src/main/cpp/audio_player.cpp",
+					"workingDirectory" : "/home/mj/StudioProjects/HearingAid/app/.externalNativeBuild/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android23 --gcc-toolchain=/home/mj/Android/Sdk/ndk-bundle/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/mj/Android/Sdk/ndk-bundle/sysroot  -Decho_EXPORTS -isystem /home/mj/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem /home/mj/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include  -isystem /home/mj/Android/Sdk/ndk-bundle/sysroot/usr/include/aarch64-linux-android -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O2 -DNDEBUG  -fPIC   -Wall -Werror  -c ",
+					"src" : "/home/mj/StudioProjects/HearingAid/app/src/main/cpp/audio_recorder.cpp",
+					"workingDirectory" : "/home/mj/StudioProjects/HearingAid/app/.externalNativeBuild/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android23 --gcc-toolchain=/home/mj/Android/Sdk/ndk-bundle/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/mj/Android/Sdk/ndk-bundle/sysroot  -Decho_EXPORTS -isystem /home/mj/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem /home/mj/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include  -isystem /home/mj/Android/Sdk/ndk-bundle/sysroot/usr/include/aarch64-linux-android -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O2 -DNDEBUG  -fPIC   -Wall -Werror  -c ",
+					"src" : "/home/mj/StudioProjects/HearingAid/app/src/main/cpp/audio_effect.cpp",
+					"workingDirectory" : "/home/mj/StudioProjects/HearingAid/app/.externalNativeBuild/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android23 --gcc-toolchain=/home/mj/Android/Sdk/ndk-bundle/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/mj/Android/Sdk/ndk-bundle/sysroot  -Decho_EXPORTS -isystem /home/mj/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem /home/mj/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include  -isystem /home/mj/Android/Sdk/ndk-bundle/sysroot/usr/include/aarch64-linux-android -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O2 -DNDEBUG  -fPIC   -Wall -Werror  -c ",
+					"src" : "/home/mj/StudioProjects/HearingAid/app/src/main/cpp/audio_common.cpp",
+					"workingDirectory" : "/home/mj/StudioProjects/HearingAid/app/.externalNativeBuild/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android23 --gcc-toolchain=/home/mj/Android/Sdk/ndk-bundle/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/mj/Android/Sdk/ndk-bundle/sysroot  -Decho_EXPORTS -isystem /home/mj/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem /home/mj/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include  -isystem /home/mj/Android/Sdk/ndk-bundle/sysroot/usr/include/aarch64-linux-android -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O2 -DNDEBUG  -fPIC   -Wall -Werror  -c ",
+					"src" : "/home/mj/StudioProjects/HearingAid/app/src/main/cpp/debug_utils.cpp",
+					"workingDirectory" : "/home/mj/StudioProjects/HearingAid/app/.externalNativeBuild/cmake/release/arm64-v8a"
+				}
+			],
+			"output" : "/home/mj/StudioProjects/HearingAid/app/build/intermediates/cmake/release/obj/arm64-v8a/libecho.so",
+			"toolchain" : "3851937239173051840"
+		}
+	},
+	"toolchains" : 
+	{
+		"3851937239173051840" : 
+		{
+			"cCompilerExecutable" : "/home/mj/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/home/mj/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
+		}
+	}
+}

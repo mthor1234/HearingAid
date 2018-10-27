@@ -1,0 +1,146 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:2:1-24:12
+MERGED from [com.android.support:appcompat-v7:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/9992a7d544b8906e9af3422443e72230/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.4.0.aar/2e59250cb4b5013175ba1ae17c314db4/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.4.0.aar/746fb6609dacf11b26e303fcb93cb511/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-v4-25.4.0.aar/73724dd096c40fd81b852af840f4d3e6/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-fragment-25.4.0.aar/cee12d5551a105037bf12d0381fb6980/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.4.0.aar/f3231ed0f8675970b8eb28e98eef7e54/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.4.0.aar/b9be9433abb880b46acae3546d9ac2b8/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.4.0.aar/c9377b5588d1bd38202144f0a46a9c05/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-compat-25.4.0.aar/66d4ea3c26439e72c8afc023526860e8/AndroidManifest.xml:17:1-31:12
+INJECTED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:2:1-24:12
+	package
+		ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:3:5-37
+		INJECTED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml
+		INJECTED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml
+		ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:2:1-24:12
+		INJECTED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml
+		ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:2:1-24:12
+		INJECTED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:5:5-87
+	android:name
+		ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:5:22-68
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:6:5-96
+	android:name
+		ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:6:22-77
+application
+ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:7:5-23:19
+MERGED from [com.android.support:appcompat-v7:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/9992a7d544b8906e9af3422443e72230/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/9992a7d544b8906e9af3422443e72230/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.4.0.aar/2e59250cb4b5013175ba1ae17c314db4/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.4.0.aar/2e59250cb4b5013175ba1ae17c314db4/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.4.0.aar/746fb6609dacf11b26e303fcb93cb511/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.4.0.aar/746fb6609dacf11b26e303fcb93cb511/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-v4-25.4.0.aar/73724dd096c40fd81b852af840f4d3e6/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-v4-25.4.0.aar/73724dd096c40fd81b852af840f4d3e6/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-fragment-25.4.0.aar/cee12d5551a105037bf12d0381fb6980/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-fragment-25.4.0.aar/cee12d5551a105037bf12d0381fb6980/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.4.0.aar/f3231ed0f8675970b8eb28e98eef7e54/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.4.0.aar/f3231ed0f8675970b8eb28e98eef7e54/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.4.0.aar/b9be9433abb880b46acae3546d9ac2b8/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.4.0.aar/b9be9433abb880b46acae3546d9ac2b8/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.4.0.aar/c9377b5588d1bd38202144f0a46a9c05/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.4.0.aar/c9377b5588d1bd38202144f0a46a9c05/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-compat-25.4.0.aar/66d4ea3c26439e72c8afc023526860e8/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-compat-25.4.0.aar/66d4ea3c26439e72c8afc023526860e8/AndroidManifest.xml:25:5-29:19
+	android:supportsRtl
+		ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:12:9-41
+	android:fullBackupContent
+		ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:9:9-42
+	android:icon
+		ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:11:9-43
+	android:allowBackup
+		ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:8:9-36
+	android:theme
+		ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:13:9-40
+activity#com.google.sample.echo.MainActivity
+ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:14:7-22:18
+	android:screenOrientation
+		ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:17:11-47
+	android:label
+		ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:16:11-43
+	android:name
+		ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:15:11-39
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:18:9-21:25
+action#android.intent.action.MAIN
+ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:19:11-63
+	android:name
+		ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:19:19-60
+category#android.intent.category.LAUNCHER
+ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:20:11-71
+	android:name
+		ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml:20:21-68
+uses-sdk
+INJECTED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml
+INJECTED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/9992a7d544b8906e9af3422443e72230/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/9992a7d544b8906e9af3422443e72230/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.4.0.aar/2e59250cb4b5013175ba1ae17c314db4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.4.0.aar/2e59250cb4b5013175ba1ae17c314db4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.4.0.aar/746fb6609dacf11b26e303fcb93cb511/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.4.0.aar/746fb6609dacf11b26e303fcb93cb511/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-v4-25.4.0.aar/73724dd096c40fd81b852af840f4d3e6/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-v4-25.4.0.aar/73724dd096c40fd81b852af840f4d3e6/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-fragment-25.4.0.aar/cee12d5551a105037bf12d0381fb6980/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-fragment-25.4.0.aar/cee12d5551a105037bf12d0381fb6980/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.4.0.aar/f3231ed0f8675970b8eb28e98eef7e54/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.4.0.aar/f3231ed0f8675970b8eb28e98eef7e54/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.4.0.aar/b9be9433abb880b46acae3546d9ac2b8/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.4.0.aar/b9be9433abb880b46acae3546d9ac2b8/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.4.0.aar/c9377b5588d1bd38202144f0a46a9c05/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.4.0.aar/c9377b5588d1bd38202144f0a46a9c05/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-compat-25.4.0.aar/66d4ea3c26439e72c8afc023526860e8/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-compat-25.4.0.aar/66d4ea3c26439e72c8afc023526860e8/AndroidManifest.xml:21:5-23:58
+INJECTED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml
+INJECTED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/9992a7d544b8906e9af3422443e72230/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml
+		ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml
+		INJECTED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml
+		ADDED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml
+		INJECTED from /home/mj/StudioProjects/HearingAid/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/9992a7d544b8906e9af3422443e72230/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.4.0.aar/2e59250cb4b5013175ba1ae17c314db4/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.4.0.aar/2e59250cb4b5013175ba1ae17c314db4/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.4.0.aar/746fb6609dacf11b26e303fcb93cb511/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.4.0.aar/746fb6609dacf11b26e303fcb93cb511/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-v4-25.4.0.aar/73724dd096c40fd81b852af840f4d3e6/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-v4-25.4.0.aar/73724dd096c40fd81b852af840f4d3e6/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-fragment-25.4.0.aar/cee12d5551a105037bf12d0381fb6980/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-fragment-25.4.0.aar/cee12d5551a105037bf12d0381fb6980/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.4.0.aar/f3231ed0f8675970b8eb28e98eef7e54/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.4.0.aar/f3231ed0f8675970b8eb28e98eef7e54/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.4.0.aar/b9be9433abb880b46acae3546d9ac2b8/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.4.0.aar/b9be9433abb880b46acae3546d9ac2b8/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.4.0.aar/c9377b5588d1bd38202144f0a46a9c05/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.4.0.aar/c9377b5588d1bd38202144f0a46a9c05/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-compat-25.4.0.aar/66d4ea3c26439e72c8afc023526860e8/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/support-compat-25.4.0.aar/66d4ea3c26439e72c8afc023526860e8/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:appcompat-v7:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/9992a7d544b8906e9af3422443e72230/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:appcompat-v7:25.4.0] /home/mj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/9992a7d544b8906e9af3422443e72230/AndroidManifest.xml:27:13-51
