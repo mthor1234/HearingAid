@@ -39,7 +39,7 @@ public class MainActivity extends Activity
     private static final int AUDIO_ECHO_REQUEST = 0;
 
     private Button   controlButton;
-    private TextView statusView;
+//    private TextView statusView;
     private String  nativeSampleRate;
     private String  nativeSampleBufSize;
 
@@ -59,7 +59,7 @@ public class MainActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         controlButton = (Button)findViewById((R.id.capture_control_button));
-        statusView = (TextView)findViewById(R.id.statusView);
+//        statusView = (TextView)findViewById(R.id.statusView);
         queryNativeAudioParameters();
 
         delaySeekBar = (SeekBar)findViewById(R.id.delaySeekBar);
@@ -173,16 +173,21 @@ public class MainActivity extends Activity
         }
         if (!isPlaying) {
             if(!createSLBufferQueueAudioPlayer()) {
-                statusView.setText(getString(R.string.player_error_msg));
+                Toast.makeText(this, getString(R.string.player_error_msg) , Toast.LENGTH_SHORT).show();
+//                statusView.setText(getString(R.string.player_error_msg));
                 return;
             }
             if(!createAudioRecorder()) {
                 deleteSLBufferQueueAudioPlayer();
-                statusView.setText(getString(R.string.recorder_error_msg));
+//                statusView.setText(getString(R.string.recorder_error_msg));
+                Toast.makeText(this, getString(R.string.recorder_error_msg) , Toast.LENGTH_SHORT).show();
+
                 return;
             }
             startPlay();   // startPlay() triggers startRecording()
-            statusView.setText(getString(R.string.echoing_status_msg));
+//            statusView.setText(getString(R.string.echoing_status_msg));
+            Toast.makeText(this, getString(R.string.echoing_status_msg) , Toast.LENGTH_SHORT).show();
+
         } else {
             stopPlay();  // stopPlay() triggers stopRecording()
             updateNativeAudioUI();
@@ -191,12 +196,14 @@ public class MainActivity extends Activity
         }
         isPlaying = !isPlaying;
         controlButton.setText(getString(isPlaying ?
-                R.string.cmd_stop_echo: R.string.cmd_start_echo));
+                R.string.cmd_stop_hearing_aid : R.string.cmd_start_hearing_aid));
     }
     public void onEchoClick(View view) {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) !=
                                                PackageManager.PERMISSION_GRANTED) {
-            statusView.setText(getString(R.string.request_permission_status_msg));
+//            statusView.setText(getString(R.string.request_permission_status_msg));
+            Toast.makeText(this, getString(R.string.request_permission_status_msg) , Toast.LENGTH_SHORT).show();
+
             ActivityCompat.requestPermissions(
                     this,
                     new String[] { Manifest.permission.RECORD_AUDIO },
@@ -206,9 +213,10 @@ public class MainActivity extends Activity
         startEcho();
     }
 
-    public void getLowLatencyParameters(View view) {
-        updateNativeAudioUI();
-    }
+    // Used to see if lowlatency audio is available for this device
+//    public void getLowLatencyParameters(View view) {
+//        updateNativeAudioUI();
+//    }
 
     private void queryNativeAudioParameters() {
         supportRecording = true;
@@ -233,14 +241,19 @@ public class MainActivity extends Activity
     }
     private void updateNativeAudioUI() {
         if (!supportRecording) {
-            statusView.setText(getString(R.string.mic_error_msg));
+//            statusView.setText(getString(R.string.mic_error_msg));
+
+            Toast.makeText(this, R.string.mic_error_msg , Toast.LENGTH_SHORT).show();
+
             controlButton.setEnabled(false);
             return;
         }
 
-        statusView.setText(getString(R.string.fast_audio_info_msg,
-                nativeSampleRate, nativeSampleBufSize));
+//        statusView.setText(getString(R.string.fast_audio_info_msg,
+//                nativeSampleRate, nativeSampleBufSize));
     }
+
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
@@ -261,7 +274,7 @@ public class MainActivity extends Activity
              * was not clicked. The assumption is that user will re-click the "start" button
              * (to retry), or shutdown the app in normal way.
              */
-            statusView.setText(getString(R.string.permission_error_msg));
+//            statusView.setText(getString(R.string.permission_error_msg));
             Toast.makeText(getApplicationContext(),
                     getString(R.string.permission_prompt_msg),
                     Toast.LENGTH_SHORT).show();
@@ -273,7 +286,9 @@ public class MainActivity extends Activity
          * re-try the "start" button to perform the normal operation. This saves us the extra
          * logic in code for async processing of the button listener.
          */
-        statusView.setText(getString(R.string.permission_granted_msg,getString(R.string.cmd_start_echo)));
+//        statusView.setText(getString(R.string.permission_granted_msg,getString(R.string.cmd_start_hearing_aid)));
+        Toast.makeText(this, getString(R.string.request_permission_status_msg) , Toast.LENGTH_SHORT).show();
+
 
 
         // The callback runs on app's thread, so we are safe to resume the action
