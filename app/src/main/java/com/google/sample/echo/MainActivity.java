@@ -42,18 +42,12 @@ public class MainActivity extends Activity
         implements ActivityCompat.OnRequestPermissionsResultCallback {
     private static final int AUDIO_ECHO_REQUEST = 0;
 
-//    private Button   controlButton;
-//    private TextView statusView;
     private ToggleButton onOffToggle;
     private String  nativeSampleRate;
     private String  nativeSampleBufSize;
 
-//    private SeekBar delaySeekBar;
-//    private TextView curDelayTV;
     private int echoDelayProgress;
 
-//    private SeekBar decaySeekBar;
-//    private TextView curDecayTV;
     private float echoDecayProgress;
 
     private boolean supportRecording;
@@ -61,7 +55,6 @@ public class MainActivity extends Activity
 
 
     // TODO: Only enable button if headphones are plugged in
-    // TODO: Add a settings screen.
     // TODO: Boost amplification
 
     @Override
@@ -69,8 +62,6 @@ public class MainActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         onOffToggle = (ToggleButton)findViewById(R.id.on_off_toggle);
-//        controlButton = (Button)findViewById((R.id.capture_control_button));
-//        statusView = (TextView)findViewById(R.id.statusView);
         queryNativeAudioParameters();
 
 
@@ -116,10 +107,10 @@ public class MainActivity extends Activity
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+//        int id = item.getItemId();
+//
+//        //noinspection SimplifiableIfStatement
+//        if (id == R.id.action_settings) {
 
             Dialog settingsDialog = new Dialog(this);
             LayoutInflater inflater = (LayoutInflater)this.getSystemService(LAYOUT_INFLATER_SERVICE);
@@ -127,7 +118,7 @@ public class MainActivity extends Activity
             settingsDialog.setContentView(layout);
 
             final SeekBar delaySeekBar = (SeekBar)layout.findViewById(R.id.delaySeekBar);
-            final TextView curDelayTV = (TextView) layout.findViewById(R.id.curDecay);
+            final TextView curDelayTV = (TextView) layout.findViewById(R.id.curDelay);
 
             echoDelayProgress = delaySeekBar.getProgress() * 1000 / delaySeekBar.getMax();
 
@@ -184,32 +175,12 @@ public class MainActivity extends Activity
             });
 
 
-//            SeekBar.OnSeekBarChangeListener yourSeekBarListener = new SeekBar.OnSeekBarChangeListener() {
-//                @Override
-//                public void onStopTrackingTouch(SeekBar seekBar) {
-//                    //add code here
-//                }
-//
-//                @Override
-//                public void onStartTrackingTouch(SeekBar seekBar) {
-//                    //add code here
-//                }
-//
-//                @Override
-//                public void onProgressChanged(SeekBar seekBark, int progress, boolean fromUser) {
-//                    //add code here
-//                }
-//            };
-//
-//            decaySeekBar.setOnSeekBarChangeListener(yourSeekBarListener);
-//            delaySeekBar.setOnSeekBarChangeListener(yourSeekBarListener);
-
             settingsDialog.show();
 
             return true;
-        }
+//        }
 
-        return super.onOptionsItemSelected(item);
+//        return super.onOptionsItemSelected(item);
     }
 
     private void startEcho() {
@@ -219,18 +190,15 @@ public class MainActivity extends Activity
         if (!isPlaying) {
             if(!createSLBufferQueueAudioPlayer()) {
                 Toast.makeText(this, getString(R.string.player_error_msg) , Toast.LENGTH_SHORT).show();
-//                statusView.setText(getString(R.string.player_error_msg));
                 return;
             }
             if(!createAudioRecorder()) {
                 deleteSLBufferQueueAudioPlayer();
-//                statusView.setText(getString(R.string.recorder_error_msg));
                 Toast.makeText(this, getString(R.string.recorder_error_msg) , Toast.LENGTH_SHORT).show();
 
                 return;
             }
             startPlay();   // startPlay() triggers startRecording()
-//            statusView.setText(getString(R.string.echoing_status_msg));
             Toast.makeText(this, getString(R.string.echoing_status_msg) , Toast.LENGTH_SHORT).show();
 
         } else {
@@ -240,11 +208,8 @@ public class MainActivity extends Activity
             deleteSLBufferQueueAudioPlayer();
         }
         isPlaying = !isPlaying;
-//        controlButton.setText(getString(isPlaying ?
-//                R.string.cmd_stop_hearing_aid : R.string.cmd_start_hearing_aid));
-
         onOffToggle.setText(getString(isPlaying ?
-                R.string.off : R.string.On));
+                R.string.On: R.string.Off));
     }
 
     public void onEchoClick(View view) {
@@ -290,17 +255,11 @@ public class MainActivity extends Activity
     }
     private void updateNativeAudioUI() {
         if (!supportRecording) {
-//            statusView.setText(getString(R.string.mic_error_msg));
-
             Toast.makeText(this, R.string.mic_error_msg , Toast.LENGTH_SHORT).show();
 
-//            controlButton.setEnabled(false);
             onOffToggle.setEnabled(false);
             return;
         }
-
-//        statusView.setText(getString(R.string.fast_audio_info_msg,
-//                nativeSampleRate, nativeSampleBufSize));
     }
 
 
@@ -324,7 +283,6 @@ public class MainActivity extends Activity
              * was not clicked. The assumption is that user will re-click the "start" button
              * (to retry), or shutdown the app in normal way.
              */
-//            statusView.setText(getString(R.string.permission_error_msg));
             Toast.makeText(getApplicationContext(),
                     getString(R.string.permission_prompt_msg),
                     Toast.LENGTH_SHORT).show();
@@ -336,10 +294,7 @@ public class MainActivity extends Activity
          * re-try the "start" button to perform the normal operation. This saves us the extra
          * logic in code for async processing of the button listener.
          */
-//        statusView.setText(getString(R.string.permission_granted_msg,getString(R.string.cmd_start_hearing_aid)));
         Toast.makeText(this, getString(R.string.request_permission_status_msg) , Toast.LENGTH_SHORT).show();
-
-
 
         // The callback runs on app's thread, so we are safe to resume the action
         startEcho();
