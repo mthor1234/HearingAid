@@ -33,13 +33,15 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 public class MainActivity extends Activity
         implements ActivityCompat.OnRequestPermissionsResultCallback {
     private static final int AUDIO_ECHO_REQUEST = 0;
 
-    private Button   controlButton;
+//    private Button   controlButton;
 //    private TextView statusView;
+    private ToggleButton onOffToggle;
     private String  nativeSampleRate;
     private String  nativeSampleBufSize;
 
@@ -54,11 +56,17 @@ public class MainActivity extends Activity
     private boolean supportRecording;
     private Boolean isPlaying = false;
 
+
+    // TODO: Only enable button if headphones are plugged in
+    // TODO: Add a settings screen.
+    // TODO: Boost amplification
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        controlButton = (Button)findViewById((R.id.capture_control_button));
+        onOffToggle = (ToggleButton)findViewById(R.id.on_off_toggle);
+//        controlButton = (Button)findViewById((R.id.capture_control_button));
 //        statusView = (TextView)findViewById(R.id.statusView);
         queryNativeAudioParameters();
 
@@ -195,9 +203,13 @@ public class MainActivity extends Activity
             deleteSLBufferQueueAudioPlayer();
         }
         isPlaying = !isPlaying;
-        controlButton.setText(getString(isPlaying ?
-                R.string.cmd_stop_hearing_aid : R.string.cmd_start_hearing_aid));
+//        controlButton.setText(getString(isPlaying ?
+//                R.string.cmd_stop_hearing_aid : R.string.cmd_start_hearing_aid));
+
+        onOffToggle.setText(getString(isPlaying ?
+                R.string.off : R.string.On));
     }
+
     public void onEchoClick(View view) {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) !=
                                                PackageManager.PERMISSION_GRANTED) {
@@ -245,7 +257,8 @@ public class MainActivity extends Activity
 
             Toast.makeText(this, R.string.mic_error_msg , Toast.LENGTH_SHORT).show();
 
-            controlButton.setEnabled(false);
+//            controlButton.setEnabled(false);
+            onOffToggle.setEnabled(false);
             return;
         }
 

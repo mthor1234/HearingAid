@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sat Oct 27 16:16:19 PDT 2018
+#Sat Oct 27 18:01:51 PDT 2018
 2.base=/home/mj/StudioProjects/HearingAid/app/build/intermediates/transforms/dexMerger/debug/11
 0.path=classes.dex
 2.baseType=DIRECTORY

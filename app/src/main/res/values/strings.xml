@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">audio-echo</string>
+    <string name="app_name">HearingAid</string>
     <string name="init_status_msg">Starting Up</string>
     <string name="request_permission_status_msg">"Requesting RECORD_AUDIO Permission..."</string>
     <string name="echoing_status_msg">Engine Echoing...</string>
@@ -21,4 +21,7 @@
 
     <string name="min_decay_label_msg">decay(decimal)</string>
     <string name="init_decay_val_msg">0.1</string>
+    <string name="hearing_aid">Hearing Aid</string>
+    <string name="off">Off</string>
+    <string name="On">On</string>
 </resources>

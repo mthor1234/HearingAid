@@ -6,3 +6,10 @@
 52	12498	0	CMakeFiles/echo.dir/audio_recorder.cpp.o	3300200451a8d3b
 52	12505	0	CMakeFiles/echo.dir/debug_utils.cpp.o	c8a4a1778bd8e95d
 12505	15681	0	/home/mj/StudioProjects/HearingAid/app/build/intermediates/cmake/debug/obj/arm64-v8a/libecho.so	9e1368db873c025
+1	6985	0	CMakeFiles/echo.dir/audio_common.cpp.o	27cc80a27afcdae1
+1	7128	0	CMakeFiles/echo.dir/audio_effect.cpp.o	6d2d08b91f99b441
+1	7166	0	CMakeFiles/echo.dir/audio_main.cpp.o	79bc04afdca418db
+1	7168	0	CMakeFiles/echo.dir/audio_recorder.cpp.o	3300200451a8d3b
+1	7185	0	CMakeFiles/echo.dir/audio_player.cpp.o	e034a61d738e85f8
+1	7192	0	CMakeFiles/echo.dir/debug_utils.cpp.o	c8a4a1778bd8e95d
+7192	8725	0	/home/mj/StudioProjects/HearingAid/app/build/intermediates/cmake/debug/obj/arm64-v8a/libecho.so	9e1368db873c025

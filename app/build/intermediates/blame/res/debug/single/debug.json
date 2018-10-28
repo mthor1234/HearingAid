@@ -688,6 +688,10 @@
         "source": "/home/mj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/9992a7d544b8906e9af3422443e72230/res/drawable-ldrtl-xxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
+        "merged": "/home/mj/StudioProjects/HearingAid/app/build/intermediates/res/merged/debug/drawable_ear_trumpet_patent.png.flat",
+        "source": "/home/mj/StudioProjects/HearingAid/app/src/main/res/drawable/ear_trumpet_patent.png"
+    },
+    {
         "merged": "/home/mj/StudioProjects/HearingAid/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
         "source": "/home/mj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/9992a7d544b8906e9af3422443e72230/res/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png"
     },
@@ -910,6 +914,10 @@
     {
         "merged": "/home/mj/StudioProjects/HearingAid/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "/home/mj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/9992a7d544b8906e9af3422443e72230/res/drawable-xhdpi-v4/abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "/home/mj/StudioProjects/HearingAid/app/build/intermediates/res/merged/debug/drawable_beethoven_deaf.png.flat",
+        "source": "/home/mj/StudioProjects/HearingAid/app/src/main/res/drawable/beethoven_deaf.png"
     },
     {
         "merged": "/home/mj/StudioProjects/HearingAid/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
