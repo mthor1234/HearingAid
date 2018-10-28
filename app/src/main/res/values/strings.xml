@@ -16,12 +16,13 @@
     <string name="permission_prompt_msg">"This sample needs RECORD_AUDIO permission"</string>
     <string name="permission_granted_msg">RECORD_AUDIO permission granted, touch %1$s to begin</string>
     <string name="permission_error_msg">"Permission for RECORD_AUDIO was denied"</string>
-    <string name="min_delay_label_msg">delay(seconds)</string>
+    <string name="min_delay_label_msg">delay</string>
     <string name="init_delay_val_msg">0.1</string>
 
-    <string name="min_decay_label_msg">decay(decimal)</string>
+    <string name="min_decay_label_msg">decay</string>
     <string name="init_decay_val_msg">0.1</string>
     <string name="hearing_aid">Hearing Aid</string>
     <string name="off">Off</string>
     <string name="On">On</string>
+    <string name="settings">Settings</string>
 </resources>

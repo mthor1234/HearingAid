@@ -3,6 +3,7 @@
     <color name="light_blue">#89cff0</color>
     <color name="washed_out_yellow">#aaffeda2</color>
     <color name="white">#fff</color>
+    <color name="black">#000</color>
 
 
 </resources>

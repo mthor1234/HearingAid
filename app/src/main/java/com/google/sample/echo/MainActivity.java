@@ -18,6 +18,7 @@ package com.google.sample.echo;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.media.AudioFormat;
@@ -26,9 +27,11 @@ import android.media.AudioRecord;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -45,12 +48,12 @@ public class MainActivity extends Activity
     private String  nativeSampleRate;
     private String  nativeSampleBufSize;
 
-    private SeekBar delaySeekBar;
-    private TextView curDelayTV;
+//    private SeekBar delaySeekBar;
+//    private TextView curDelayTV;
     private int echoDelayProgress;
 
-    private SeekBar decaySeekBar;
-    private TextView curDecayTV;
+//    private SeekBar decaySeekBar;
+//    private TextView curDecayTV;
     private float echoDecayProgress;
 
     private boolean supportRecording;
@@ -70,58 +73,6 @@ public class MainActivity extends Activity
 //        statusView = (TextView)findViewById(R.id.statusView);
         queryNativeAudioParameters();
 
-        delaySeekBar = (SeekBar)findViewById(R.id.delaySeekBar);
-        curDelayTV = (TextView)findViewById(R.id.curDelay);
-        echoDelayProgress = delaySeekBar.getProgress() * 1000 / delaySeekBar.getMax();
-        delaySeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                float curVal = (float)progress / delaySeekBar.getMax();
-                curDelayTV.setText(String.format("%s", curVal));
-                setSeekBarPromptPosition(delaySeekBar, curDelayTV);
-                if (!fromUser) return;
-
-                echoDelayProgress = progress * 1000 / delaySeekBar.getMax();
-                configureEcho(echoDelayProgress, echoDecayProgress);
-            }
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {}
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {}
-        });
-        delaySeekBar.post(new Runnable() {
-            @Override
-            public void run() {
-                setSeekBarPromptPosition(delaySeekBar, curDelayTV);
-            }
-        });
-
-        decaySeekBar = (SeekBar)findViewById(R.id.decaySeekBar);
-        curDecayTV = (TextView)findViewById(R.id.curDecay);
-        echoDecayProgress = (float)decaySeekBar.getProgress() / decaySeekBar.getMax();
-        decaySeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                float curVal = (float)progress / seekBar.getMax();
-                curDecayTV.setText(String.format("%s", curVal));
-                setSeekBarPromptPosition(decaySeekBar, curDecayTV);
-                if (!fromUser)
-                    return;
-
-                echoDecayProgress = curVal;
-                configureEcho(echoDelayProgress, echoDecayProgress);
-            }
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {}
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {}
-        });
-        decaySeekBar.post(new Runnable() {
-            @Override
-            public void run() {
-                setSeekBarPromptPosition(decaySeekBar, curDecayTV);
-            }
-        });
 
         // initialize native audio system
         updateNativeAudioUI();
@@ -169,6 +120,92 @@ public class MainActivity extends Activity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            Dialog settingsDialog = new Dialog(this);
+            LayoutInflater inflater = (LayoutInflater)this.getSystemService(LAYOUT_INFLATER_SERVICE);
+            View layout = inflater.inflate(R.layout.settings_dialog, (ViewGroup)findViewById(R.id.dialog_rootview));
+            settingsDialog.setContentView(layout);
+
+            final SeekBar delaySeekBar = (SeekBar)layout.findViewById(R.id.delaySeekBar);
+            final TextView curDelayTV = (TextView) layout.findViewById(R.id.curDecay);
+
+            echoDelayProgress = delaySeekBar.getProgress() * 1000 / delaySeekBar.getMax();
+
+            delaySeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                @Override
+                public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                    float curVal = (float)progress / delaySeekBar.getMax();
+                    curDelayTV.setText(String.format("%s", curVal));
+                    setSeekBarPromptPosition(delaySeekBar, curDelayTV);
+                    if (!fromUser) return;
+
+                    echoDelayProgress = progress * 1000 / delaySeekBar.getMax();
+                    configureEcho(echoDelayProgress, echoDecayProgress);
+                }
+                @Override
+                public void onStartTrackingTouch(SeekBar seekBar) {}
+                @Override
+                public void onStopTrackingTouch(SeekBar seekBar) {}
+            });
+            delaySeekBar.post(new Runnable() {
+                @Override
+                public void run() {
+                    setSeekBarPromptPosition(delaySeekBar, curDelayTV);
+                }
+            });
+
+            final SeekBar decaySeekBar = (SeekBar)layout.findViewById(R.id.decaySeekBar);
+            final TextView curDecayTV = (TextView)layout.findViewById(R.id.curDecay);
+            echoDecayProgress = (float)decaySeekBar.getProgress() / decaySeekBar.getMax();
+
+
+            decaySeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                @Override
+                public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                    float curVal = (float)progress / seekBar.getMax();
+                    curDecayTV.setText(String.format("%s", curVal));
+                    setSeekBarPromptPosition(decaySeekBar, curDecayTV);
+                    if (!fromUser)
+                        return;
+
+                    echoDecayProgress = curVal;
+                    configureEcho(echoDelayProgress, echoDecayProgress);
+                }
+                @Override
+                public void onStartTrackingTouch(SeekBar seekBar) {}
+                @Override
+                public void onStopTrackingTouch(SeekBar seekBar) {}
+            });
+            decaySeekBar.post(new Runnable() {
+                @Override
+                public void run() {
+                    setSeekBarPromptPosition(decaySeekBar, curDecayTV);
+                }
+            });
+
+
+//            SeekBar.OnSeekBarChangeListener yourSeekBarListener = new SeekBar.OnSeekBarChangeListener() {
+//                @Override
+//                public void onStopTrackingTouch(SeekBar seekBar) {
+//                    //add code here
+//                }
+//
+//                @Override
+//                public void onStartTrackingTouch(SeekBar seekBar) {
+//                    //add code here
+//                }
+//
+//                @Override
+//                public void onProgressChanged(SeekBar seekBark, int progress, boolean fromUser) {
+//                    //add code here
+//                }
+//            };
+//
+//            decaySeekBar.setOnSeekBarChangeListener(yourSeekBarListener);
+//            delaySeekBar.setOnSeekBarChangeListener(yourSeekBarListener);
+
+            settingsDialog.show();
+
             return true;
         }
 
