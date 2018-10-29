@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="light_blue">#89cff0</color>
+    <color name="disabled_light_blue">#dd89cff0</color>
     <color name="washed_out_yellow">#aaffeda2</color>
     <color name="white">#fff</color>
     <color name="faded_white">#AAfefbf7</color>

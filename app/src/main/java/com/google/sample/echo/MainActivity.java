@@ -19,7 +19,10 @@ package com.google.sample.echo;
 import android.Manifest;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.media.AudioFormat;
 import android.media.AudioManager;
@@ -27,6 +30,8 @@ import android.media.AudioRecord;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.media.session.MediaSessionCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -38,11 +43,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import static android.content.ContentValues.TAG;
+
 public class MainActivity extends Activity
         implements ActivityCompat.OnRequestPermissionsResultCallback {
     private static final int AUDIO_ECHO_REQUEST = 0;
 
     private ToggleButton onOffToggle;
+    private TextView tv_status;
+
     private String  nativeSampleRate;
     private String  nativeSampleBufSize;
 
@@ -53,16 +62,28 @@ public class MainActivity extends Activity
     private boolean supportRecording;
     private Boolean isPlaying = false;
 
+    private boolean headphonesConnected;
 
-    // TODO: Only enable button if headphones are plugged in
+
+    private AudioOutputIntentReceiver outputReceiver;
+    
+    // TODO: Possibly lower volume when a phonecall / notification comes in.
     // TODO: Boost amplification
+    // TODO: Add more settings
+    // TODO: Save Previous Settings
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         onOffToggle = (ToggleButton)findViewById(R.id.on_off_toggle);
+        tv_status = (TextView) findViewById(R.id.toggle_label);
+
         queryNativeAudioParameters();
+
+        // Set the audio output listener
+        outputReceiver = new AudioOutputIntentReceiver();
 
 
         // initialize native audio system
@@ -81,6 +102,21 @@ public class MainActivity extends Activity
         float thumbX = (float)seekBar.getProgress()/ seekBar.getMax() *
                               seekBar.getWidth() + seekBar.getX();
         label.setX(thumbX - label.getWidth()/2.0f);
+    }
+
+    @Override
+    protected void onResume() {
+        // Register the headphone jack receiver
+        IntentFilter intentFilter = new IntentFilter(Intent.ACTION_HEADSET_PLUG);
+        registerReceiver(outputReceiver, intentFilter);
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        // Unregister the headphone jack receiver
+        unregisterReceiver(outputReceiver);
+        super.onPause();
     }
 
     @Override
@@ -104,14 +140,6 @@ public class MainActivity extends Activity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-
             Dialog settingsDialog = new Dialog(this);
             LayoutInflater inflater = (LayoutInflater)this.getSystemService(LAYOUT_INFLATER_SERVICE);
             View layout = inflater.inflate(R.layout.settings_dialog, (ViewGroup)findViewById(R.id.dialog_rootview));
@@ -178,9 +206,6 @@ public class MainActivity extends Activity
             settingsDialog.show();
 
             return true;
-//        }
-
-//        return super.onOptionsItemSelected(item);
     }
 
     private void startEcho() {
@@ -189,17 +214,17 @@ public class MainActivity extends Activity
         }
         if (!isPlaying) {
             if(!createSLBufferQueueAudioPlayer()) {
-                Toast.makeText(this, getString(R.string.player_error_msg) , Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, getString(R.string.player_error_msg) , Toast.LENGTH_SHORT).show();
                 return;
             }
             if(!createAudioRecorder()) {
                 deleteSLBufferQueueAudioPlayer();
-                Toast.makeText(this, getString(R.string.recorder_error_msg) , Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, getString(R.string.recorder_error_msg) , Toast.LENGTH_SHORT).show();
 
                 return;
             }
             startPlay();   // startPlay() triggers startRecording()
-            Toast.makeText(this, getString(R.string.echoing_status_msg) , Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, getString(R.string.echoing_status_msg) , Toast.LENGTH_SHORT).show();
 
         } else {
             stopPlay();  // stopPlay() triggers stopRecording()
@@ -228,9 +253,6 @@ public class MainActivity extends Activity
     }
 
     // Used to see if lowlatency audio is available for this device
-//    public void getLowLatencyParameters(View view) {
-//        updateNativeAudioUI();
-//    }
 
     private void queryNativeAudioParameters() {
         supportRecording = true;
@@ -256,8 +278,20 @@ public class MainActivity extends Activity
     private void updateNativeAudioUI() {
         if (!supportRecording) {
             Toast.makeText(this, R.string.mic_error_msg , Toast.LENGTH_SHORT).show();
-
             onOffToggle.setEnabled(false);
+            return;
+        }
+
+        if(!headphonesConnected){
+            tv_status.setText("Please Plug in \n Head Phones");
+            onOffToggle.setEnabled(false);
+            onOffToggle.setVisibility(View.INVISIBLE);
+           // stopPlay();
+            return;
+        }else{
+            tv_status.setText("Toggle Hearing Aid");
+            onOffToggle.setEnabled(true);
+            onOffToggle.setVisibility(View.VISIBLE);
             return;
         }
     }
@@ -299,6 +333,36 @@ public class MainActivity extends Activity
         // The callback runs on app's thread, so we are safe to resume the action
         startEcho();
     }
+
+
+    // Listens to headphones being plugged in / unplugged
+    private class AudioOutputIntentReceiver extends BroadcastReceiver {
+        @Override public void onReceive(Context context, Intent intent) {
+            if (intent.getAction().equals(Intent.ACTION_HEADSET_PLUG)) {
+                int state = intent.getIntExtra("state", -1);
+                switch (state) {
+                    case 0:
+                        Log.d(TAG, "Headset is unplugged");
+                        headphonesConnected = false;
+                        updateNativeAudioUI();
+
+                        break;
+                    case 1:
+                        Log.d(TAG, "Headset is plugged");
+                        headphonesConnected = true;
+                        updateNativeAudioUI();
+
+                        break;
+                    default:
+                        Log.d(TAG, "I have no idea what the headset state is");
+                        headphonesConnected = false;
+                        updateNativeAudioUI();
+                }
+            }
+        }
+    }
+
+
 
     /*
      * Loading our lib
