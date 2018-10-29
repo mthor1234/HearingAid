@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 26
 
     defaultConfig {
         applicationId 'com.google.sample.echo'
@@ -11,7 +11,7 @@ android {
              *) set ANDROID_STL to c++_static for some very earlier version android.
          */
         minSdkVersion 23
-        targetSdkVersion 25
+        targetSdkVersion 26
         versionCode 1
         versionName '1.0'
         externalNativeBuild {

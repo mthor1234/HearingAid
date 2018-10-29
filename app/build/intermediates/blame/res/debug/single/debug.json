@@ -56,12 +56,12 @@
         "source": "/home/mj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/9992a7d544b8906e9af3422443e72230/res/drawable-ldrtl-mdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "/home/mj/StudioProjects/HearingAid/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "/home/mj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/9992a7d544b8906e9af3422443e72230/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
-    },
-    {
         "merged": "/home/mj/StudioProjects/HearingAid/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "/home/mj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/9992a7d544b8906e9af3422443e72230/res/drawable-xxhdpi-v4/abc_ic_star_black_48dp.png"
+    },
+    {
+        "merged": "/home/mj/StudioProjects/HearingAid/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/home/mj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/9992a7d544b8906e9af3422443e72230/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
     },
     {
         "merged": "/home/mj/StudioProjects/HearingAid/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
@@ -914,10 +914,6 @@
     {
         "merged": "/home/mj/StudioProjects/HearingAid/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "/home/mj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/9992a7d544b8906e9af3422443e72230/res/drawable-xhdpi-v4/abc_list_focused_holo.9.png"
-    },
-    {
-        "merged": "/home/mj/StudioProjects/HearingAid/app/build/intermediates/res/merged/debug/drawable_beethoven_deaf.png.flat",
-        "source": "/home/mj/StudioProjects/HearingAid/app/src/main/res/drawable/beethoven_deaf.png"
     },
     {
         "merged": "/home/mj/StudioProjects/HearingAid/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
