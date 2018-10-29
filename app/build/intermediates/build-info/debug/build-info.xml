@@ -5,27 +5,26 @@
     build-mode="COLD"
     density="560dpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
     plugin-version="3.1.3"
-    timestamp="1540776257661"
+    timestamp="1540777753831"
     token="882194008489153988"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="119" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="16" />
+        duration="0" />
     <task
         name="verifier"
-        duration="3" />
+        duration="0" />
 
     <artifact
-        location="/home/mj/StudioProjects/HearingAid/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+        location="/home/mj/StudioProjects/HearingAid/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
         type="SPLIT" />
 
     <build
@@ -75,19 +74,21 @@
     <build
         build-mode="COLD"
         ir-eligibility="R_CLASS_CHANGE"
-        timestamp="1540776203964"
+        timestamp="1540777283302"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/home/mj/StudioProjects/HearingAid/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            location="/home/mj/StudioProjects/HearingAid/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/mj/StudioProjects/HearingAid/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1540776257661"
+        timestamp="1540777753831"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/home/mj/StudioProjects/HearingAid/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            location="/home/mj/StudioProjects/HearingAid/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
     </build>
 

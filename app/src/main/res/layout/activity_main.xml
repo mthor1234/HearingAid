@@ -20,8 +20,10 @@
         android:layout_above="@id/on_off_toggle"
         android:text="Toggle Hearing Aid"
         android:layout_centerHorizontal="true"
+        android:padding="15dp"
         android:textSize="30sp"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:background="@color/white"/>
 
 
     <ToggleButton

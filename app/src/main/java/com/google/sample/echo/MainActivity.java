@@ -66,11 +66,12 @@ public class MainActivity extends Activity
 
 
     private AudioOutputIntentReceiver outputReceiver;
-    
+
     // TODO: Possibly lower volume when a phonecall / notification comes in.
     // TODO: Boost amplification
     // TODO: Add more settings
     // TODO: Save Previous Settings
+    // TODO: Adjust dialog seekbars to be centered within labels
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -283,13 +284,13 @@ public class MainActivity extends Activity
         }
 
         if(!headphonesConnected){
-            tv_status.setText("Please Plug in \n Head Phones");
+            tv_status.setText(R.string.please_plug_in_headphones);
             onOffToggle.setEnabled(false);
             onOffToggle.setVisibility(View.INVISIBLE);
            // stopPlay();
             return;
         }else{
-            tv_status.setText("Toggle Hearing Aid");
+            tv_status.setText(R.string.toggle);
             onOffToggle.setEnabled(true);
             onOffToggle.setVisibility(View.VISIBLE);
             return;

@@ -25,4 +25,6 @@
     <string name="On">ON</string>
     <string name="settings">Settings</string>
     <string name="hearing_aid">Hearing Aid</string>
+    <string name="please_plug_in_headphones">Please Plug in   Headphones</string>
+    <string name="toggle">Toggle Hearing Aid</string>
 </resources>
